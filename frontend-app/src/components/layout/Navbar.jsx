@@ -12,7 +12,7 @@ export default function Navbar() {
       {/* Brand / Logo */}
       <div className="flex items-center gap-8">
         <span className="text-xl font-bold font-mono tracking-tighter text-blue-600 dark:text-blue-400">
-          ZipZy HR
+          Order Dashboard
         </span>
         
         {/* Desktop Navigation */}

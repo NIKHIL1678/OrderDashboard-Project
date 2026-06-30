@@ -1,14 +1,16 @@
 export default function StatusBadge({ status }) {
+  const baseStyle = "px-2 py-1 text-[10px] font-mono tracking-widest uppercase border";
+  
   const styles = {
-    Completed: "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 border border-green-200 dark:border-green-800",
-    Pending: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400 border border-yellow-200 dark:border-yellow-800",
-    Cancelled: "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 border border-red-200 dark:border-red-800",
+    Completed: "text-emerald-700 border-emerald-200 bg-emerald-50 dark:text-emerald-400 dark:border-emerald-900/50 dark:bg-emerald-950/30",
+    Pending: "text-amber-700 border-amber-200 bg-amber-50 dark:text-amber-400 dark:border-amber-900/50 dark:bg-amber-950/30",
+    Cancelled: "text-red-700 border-red-200 bg-red-50 dark:text-red-400 dark:border-red-900/50 dark:bg-red-950/30",
   };
-
-  const currentStyle = styles[status] || "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-300";
+  
+  const currentStyle = styles[status] || "text-gray-700 border-gray-200 bg-gray-50 dark:text-gray-400 dark:border-gray-800 dark:bg-gray-900";
 
   return (
-    <span className={`px-2.5 py-0.5 text-xs font-semibold rounded-full ${currentStyle}`}>
+    <span className={`${baseStyle} ${currentStyle}`}>
       {status}
     </span>
   );

@@ -1,11 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
 import OrderDashboard from './components/Pages/orderDashboard';
+import AddOrder from './components/Pages/Addorder';
 
 // Simple Home Page Component
 const HomePage = () => (
   <div className="p-8 flex flex-col items-center justify-center min-h-[60vh] text-center">
-    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Welcome to ZipZy HR</h1>
+    <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Welcome to Your Resturant </h1>
     <p className="text-gray-500 dark:text-gray-400 max-w-lg">
       Enterprise-grade management system. Navigate to the dashboard to view recent orders and activities.
     </p>
@@ -20,6 +21,8 @@ function App() {
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/dashboard" element={<OrderDashboard />} />
+         
+          <Route path="/add-order" element={<AddOrder />} />
         </Route>
       </Routes>
     </BrowserRouter>

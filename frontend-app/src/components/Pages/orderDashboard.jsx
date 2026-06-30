@@ -39,13 +39,6 @@ export default function OrderDashboard() {
             <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Orders</h1>
             <p className="text-sm text-gray-500 dark:text-gray-400">Manage your recent transactions</p>
           </div>
-          
-          <button
-            onClick={() => setIsDarkMode(!isDarkMode)}
-            className="self-start sm:self-auto px-4 py-2 text-sm font-medium rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
-          >
-            {isDarkMode ? '☀️ Light Mode' : '🌙 Dark Mode'}
-          </button>
         </header>
 
         {/* Controls Section: Search & Filter */}
